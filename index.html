@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <style type="text/css">
+            .root>div {
+                border: 1px solid;
+                width: 120px;
+                height: 20px;
+                margin-bottom: 2px;
+            }
+
+            .wrapper {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 10px;
+                grid-auto-rows: minmax(100px, auto);
+            }
+            .one {
+                grid-column: 1;
+                grid-row: 1;
+            }
+            .two {
+                grid-column: 2;
+                grid-row: 1;
+            }
+            .three {
+                grid-column: 1;
+                grid-row: 2 / 5;
+            }
+            .four {
+                grid-column: 2;
+                grid-row: 1;
+            }
+            .five {
+                grid-column: 1;
+                grid-row: 3;
+            }
+            .six {
+                grid-column: 2;
+                grid-row: 3;
+            }
+            .seven {
+                grid-column: 1;
+                grid-row: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="one">
+                <select id="romSelector">
+                    <option>Select ROM</option>
+                </select>
+                <button id="pause">pause</button>
+                <br />
+                <canvas id="screen" width="512" height="256" style="border: 1px solid black;"></canvas>
+            </div>
+            <div>
+            </div>
+            <div class="two">
+                <div>
+                    current OP: <b id="currentOp"></b>
+                </div>
+                <div>
+                    current PC: <b id="currentPc"></b>
+                </div>
+            </div>
+            <div class="seven">
+                Pipedrive rocks!
+            </div>
+            <div class="five">
+                stack head: <br />
+                <div id="stackRoot" class="root">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="six">
+                v reg: <br />
+                <div id="vregRoot" class="root">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="init.js"></script>
+        <script src="lib.js"></script>
+        <script src="executors.js"></script>
+        <script src="Screen.js"></script>
+        <script src="Input.js"></script>
+        <script src="Speaker.js"></script>
+        <script src="Pc.js"></script>
+        <script src="Chip8.js"></script>
+        <script src="Pc.js"></script>
+        <script src="Debugger.js"></script>
+        <script src="Runner.js"></script>
+        <script src="opcode.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
